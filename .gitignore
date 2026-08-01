@@ -23,3 +23,6 @@ yarn-debug.log*
 .idea/
 .DS_Store
 Thumbs.db
+
+# Repomix output files
+repomix-output.*
