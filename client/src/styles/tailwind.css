@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* 1. Khai báo màu primary cho Tailwind */
+@theme {
+  --color-primary: #2563eb;
+}
+
+/* 2. Dòng này là "bảo hiểm 100%", ép trình duyệt phải nhận màu động */
+@layer utilities {
+  .bg-primary { background-color: var(--color-primary) !important; }
+  .text-primary { color: var(--color-primary) !important; }
+  .border-primary { border-color: var(--color-primary) !important; }
+}

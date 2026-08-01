@@ -1,0 +1,25 @@
+node_modules/
+**/node_modules/
+
+# Environment files may contain secrets.
+.env
+**/.env
+.env.*
+!.env.example
+
+# Generated output and test artifacts.
+dist/
+build/
+coverage/
+.cache/
+**/src/generated/prisma/
+
+# Logs and editor/OS metadata.
+*.log
+npm-debug.log*
+yarn-debug.log*
+.vs/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

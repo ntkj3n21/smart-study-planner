@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Study Planner UI Design</title>
+
+    <script>
+      (function() {
+        try {
+          const savedSettings = localStorage.getItem('userSettings');
+          if (savedSettings) {
+            const parsed = JSON.parse(savedSettings);
+            if (parsed.appearance === 'dark') {
+              document.documentElement.classList.add('dark');
+            } else {
+              document.documentElement.classList.remove('dark');
+            }
+          }
+        } catch (e) {
+          // Phòng trường hợp localStorage bị lỗi thì không làm crash trang web
+          console.error('DarkMode script error:', e);
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
